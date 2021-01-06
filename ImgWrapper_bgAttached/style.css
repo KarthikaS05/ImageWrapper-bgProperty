@@ -1,0 +1,41 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* keeping ht more to show the scroll effect whn background-attachment is fixed */
+  height: 300vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: "Montserrat", sans-serif;
+  background-color: #fff;
+}
+
+.container {
+  height: 400px;
+  width: 800px;
+  margin-top: 10px;
+  border: 10px solid rgba(223, 26, 12, 0.904);
+  color: rgb(160, 151, 20);
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  background-color: rgba(236, 91, 91, 0.562);
+  /* liner-gradient & radical-gradient are not bg-color but its a background-image */
+  background-image: url(images/attachment.JPG);
+  background-repeat: no-repeat; /* def value is repeat */
+  background-position: center; /* takes in 2 values x & y, fallbck value if y is center if only x is given */
+  /* def value of bgp is left-top */
+  background-size: cover;
+  background-attachment: fixed;
+  font-size: 80px;
+  font-weight: 600;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}

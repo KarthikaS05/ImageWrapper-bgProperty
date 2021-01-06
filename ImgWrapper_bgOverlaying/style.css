@@ -1,0 +1,41 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* keeping ht more to show the scroll effect whn background-attachment is fixed */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  background-color: #fff;
+}
+
+.container {
+  height: 400px;
+  width: 600px;
+  margin-top: 10px;
+  border: 10px solid rgba(13, 203, 228, 0.678);
+  color: rgb(5, 14, 100);
+  cursor: pointer;
+  overflow: hidden;
+  background: linear-gradient(
+      to bottom,
+      rgba(220, 228, 246, 0.5) 10%,
+      rgba(60, 67, 75, 0.5) 30%
+    ),
+    radial-gradient(
+      circle,
+      rgba(163, 241, 215, 0.575) 30%,
+      rgba(148, 233, 233, 0.514) 0%
+    ),
+    url(images/overLay.JPG) no-repeat center center / cover;
+  background-origin: border-box; /* bg img will start from upper left corner of border, def value is padding-box */
+  font-size: 50px;
+  font-weight: 700;
+}

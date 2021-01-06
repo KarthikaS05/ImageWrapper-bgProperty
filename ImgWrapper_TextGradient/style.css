@@ -1,0 +1,58 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* keeping ht more to show the scroll effect whn background-attachment is fixed */
+  height: 300vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: "Montserrat", sans-serif;
+  background-color: #fff;
+}
+
+.container {
+  padding: 10px;
+  height: 500px;
+  width: 800px;
+  margin-top: 10px;
+  border: 10px double rgba(66, 85, 160, 0.452);
+  color: #fff;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  background-repeat: no-repeat; /* def value is repeat */
+  background-size: cover;
+  background-position: center; /* takes in 2 values x & y, fallbck value if y is center if only x is given */
+  /* def value of bgp is left-top */
+  background-origin: border-box; /* bg img will start from upper left corner of content, def value is padding-box */
+  /* for text gradient*/
+  /* liner-gradient & radical-gradient are not bg-color but its a background-image */
+  background-color: #ffeaa7;
+  background-image: linear-gradient(315deg, #ffeaa7 0%, #000000 74%);
+  font-size: 80px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* to clip the bg except text and make the text color transparent */
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(246,220,232,.5) 0%, rgba(60,67,75,1) 100%), url(images/text.jpg);
+  z-index: -1;
+}

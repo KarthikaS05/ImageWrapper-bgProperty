@@ -1,0 +1,42 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* keeping ht more to show the scroll effect whn background-attachment is fixed */
+  height: 300vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: "Montserrat", sans-serif;
+  background-color: #fff;
+}
+
+.container {
+  padding: 20px;
+  height: 400px;
+  width: 600px;
+  margin-top: 10px;
+  border: 10px dashed rgba(119, 138, 223, 0.452);
+  color: #fff;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  background-color: rgba(236, 91, 91, 0.562);
+  /*liner-gradient&radical-gradientarenotbg-colorbutitsabackground-image*/
+  background-image: url(images/dance.jpg);
+  background-repeat: no-repeat;
+  /*def value is repeat*/
+  background-position: center;
+  /*takes in 2 valuesx&y,fallbck value if y is center if only x is given*/
+  /*def value of bgp is left-top*/
+  background-size: cover;
+   background-origin: content-box;
+  /*bg img will start from upper left corner of content,def value is padding-box*/
+    background-clip: padding-box;  
+  /*the bg color is kept only till padding end.*/
+}
